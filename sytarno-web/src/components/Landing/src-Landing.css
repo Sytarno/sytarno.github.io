@@ -1,0 +1,12 @@
+#landing-section{
+    background-color: var(--main-bg-color);
+    height:100vh;
+}
+
+#main-title{
+    color: var(--main-text-color);
+    width: 30%;
+    margin-left: 35%;
+    position: fixed;
+    top: 40%;
+}

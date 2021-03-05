@@ -1,0 +1,31 @@
+.nav-parent{
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+.nav-btn{
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    transition: transform 0.1s ease-out;
+}
+
+.nav-btn-text{
+    color: var(--main-text-color);
+}
+
+.nav-btn:hover{
+    transform: scale(1.1);
+    transform: rotate3d(180, 0, 0);
+}
+
+.nav-btn-text:hover{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.night-btn:hover{
+    cursor: pointer;
+}
