@@ -1,6 +1,6 @@
 {
-  "homepage": "http://sytarno.github.io/",
-  "name": "evan-nguyen",
+  "homepage": "http://sytarno.github.io/sytarno-web",
+  "name": "sytarno-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
