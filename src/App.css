@@ -1,6 +1,16 @@
 :root{
   --theme-color-1: #000000;
-  
-  --main-bg-color: #080705;
-  --main-text-color: #EFF1F3;
+
+  --main-bg-color: #EFF1F3;
+  --main-text-color: #080705;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

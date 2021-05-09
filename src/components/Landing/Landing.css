@@ -1,0 +1,36 @@
+#landing-section{
+    background-color: var(--main-bg-color);
+    height:150vh;
+}
+
+#main-title{
+    color: var(--main-text-color);
+    width: 30%;
+    position: sticky;
+    left: 35%;
+    top: 40%;
+}
+
+#main-title-text:hover{
+    transform: scale(1.1);
+
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1)
+}
+
+/*tsparticles*/
+#tsparticles {
+    width: 100%;
+    height: 100%;
+}
+
+/*anime.js*/
+.line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--main-text-color);
+    transform-origin: 0 0;
+}
+.l1 { bottom: 0; }
