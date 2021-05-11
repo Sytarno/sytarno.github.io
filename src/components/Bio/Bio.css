@@ -1,4 +1,20 @@
-#info-section{
+#bio{
     background-color: var(--main-bg-color);
-    height:100vh;
+    height:120vh;
+} 
+
+/*anime.js*/
+.box {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--main-text-color);
+    transform-origin: 0 0;
 }
+
+.box l1 { left: 0; }
+.box l2 { bottom: 0; }
+.box l3 { right: 0; }
+.boxl4 { top: 0; }

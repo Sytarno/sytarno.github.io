@@ -1,36 +1,47 @@
-#landing-section{
-    background-color: var(--main-bg-color);
-    height:150vh;
+#landing-section {
+  background-color: var(--main-bg-color);
+  height: 150vh;
+  padding-bottom: 10vh;
 }
 
-#main-title{
-    color: var(--main-text-color);
-    width: 30%;
-    position: sticky;
-    left: 35%;
-    top: 40%;
+#landing-section::-webkit-scrollbar {
+  transform: translate3d(0, -20%, 0);
 }
 
-#main-title-text:hover{
-    transform: scale(1.1);
+#main-title {
+  color: var(--main-text-color);
+  width: 25%;
+  position: sticky;
+  left: 37.5%;
+  top: 40%;
+}
 
-    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1)
+#main-title-text {
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#main-title-text:hover {
+  transform: scale(1.1);
 }
 
 /*tsparticles*/
 #tsparticles {
-    width: 100%;
-    height: 100%;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 125%;
 }
 
 /*anime.js*/
 .line {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: var(--main-text-color);
-    transform-origin: 0 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-text-color);
+  transform-origin: 0 0;
 }
-.l1 { bottom: 0; }
+.l1 {
+  bottom: 0;
+}

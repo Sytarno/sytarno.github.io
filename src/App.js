@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 
+import Wrapper from "./components/Wrapper/Wrapper";
 import Landing from "./components/Landing/Landing";
 import NavParent from "./components/Navigation/NavParent";
 import Bio from "./components/Bio/Bio";
@@ -28,9 +29,9 @@ export default function App() {
   return (
   <>
     <div id="root">
-      <NavParent nightMode = {nightMode} setNightMode = {setNightMode}/>
       <Landing nightMode = {nightMode} setNightMode = {setNightMode}/>
       <Bio></Bio>
+      <NavParent nightMode = {nightMode} setNightMode = {setNightMode}/>
     </div>
   </>
   )
