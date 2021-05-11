@@ -14,22 +14,6 @@ function runAnim() {
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio >= 0.7) {
-        runAnim();
-        observer.disconnect();
-      }
-    });
-  },
-  {
-    threshold: 0.7,
-  }
-);
-
-var element = document.getElementById("bio")
-
 const Bio = () => {
   return (
     <section id="bio">

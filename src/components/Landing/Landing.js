@@ -64,7 +64,6 @@ const Landing = ({ nightMode, setNightMode }) => {
   const [anim, toggle] = useState(1);
   return (
     <section id="landing-section">
-      <Particles params={particleParams(nightMode)} />
       <div
         onClick={() => setNightMode(!nightMode)}
         id="main-title"

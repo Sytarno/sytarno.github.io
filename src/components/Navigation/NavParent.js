@@ -1,25 +1,44 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./NavParent.css";
-import {NightModeButton} from "../assets";
-import * as Scroll from "react-scroll";
+import { NightModeButton } from "../assets";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-var Link = Scroll.Link;
-
-const NavButton = ({text, destination}) => {
+const NavButton = ({ text, destination }) => {
   return (
     <div className="nav-btn">
-        <Link href = {"#"+destination} smooth = {true} className="nav-btn-text" to={destination}>
+      {
+      <a
+        href={"#" + destination}
+        to={destination}
+        smooth={true}
+        className="nav-btn-text"
+      >
         {text}
-        </Link>
+      </a>
+      }
+      
+      {/*
+      <Link
+        activeClass="active"
+        to="bio"
+        spy={true}
+        smooth={true}
+        className="nav-btn-text"
+        offset={-70}
+        duration={500}
+      >
+        {text}
+      </Link>
+      */}
     </div>
   );
-}
+};
 
-const NavParent = ({nightMode, setNightMode}) => {
+const NavParent = ({ nightMode, setNightMode }) => {
   return (
-    <div className = "nav-parent noselect"> 
-      <NavButton text = "Info" destination = "bio"/>
-      <NightModeButton nightMode = {nightMode} setNightMode = {setNightMode}/>
+    <div className="nav-parent noselect">
+      <NavButton text="Info" destination="bio" />
+      <NightModeButton nightMode={nightMode} setNightMode={setNightMode} />
     </div>
   );
 };
