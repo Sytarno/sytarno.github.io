@@ -71,7 +71,7 @@ const Landing = ({ nightMode, setNightMode }) => {
         className="text-center noselect"
       >
         <h1 id="main-title-text">Evan Nguyen</h1>
-        <span class="line l1"></span>
+        <span className="line l1"></span>
       </div>
       <Slide nightMode={nightMode} setNightMode={setNightMode} />
     </section>
