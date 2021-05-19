@@ -2,45 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Landing.css";
 import anime from 'animejs'
 
-import Particles from "react-particles-js";
 import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
-
-const particleParams = (nightMode) => {
-  return {
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-        },
-      },
-      size: {
-        value: 1.5 * (0.2, 0.5, 0.8, 1),
-      },
-      color: {
-        value: nightMode ? "#ffffff" : "#000000",
-      },
-      line_linked: {
-        enable: false,
-      },
-      move: {
-        direction: "bottom",
-        out_mode: "out",
-        speed: 1 * (0.1, 0.5, 0.1, 1),
-      },
-      opacity: {
-        value: 1,
-      },
-    },
-    /*interactivity: {
-      modes: {
-        remove: {
-          particles_nb: 10,
-        },
-      },
-    },*/
-  };
-};
 
 const Slide = ({ nightMode, setNightMode }) => {
   const animationRef = React.useRef(null);

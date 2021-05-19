@@ -5,6 +5,7 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Landing from "./components/Landing/Landing";
 import NavParent from "./components/Navigation/NavParent";
 import Bio from "./components/Bio/Bio";
+import Gallery from "./components/Gallery/Gallery";
 
 import "./components/Landing/Landing.css";
 
@@ -30,8 +31,9 @@ const particleParams = (nightMode, amount, size) => {
     particles: {
       number: {
         value: amount,
+        enable: true,
         density: {
-          enable: true,
+          value_area: 2000,
         },
       },
       size: {
@@ -64,17 +66,18 @@ export default function App() {
       <div id="root">
         <div className="parallax">
           <div className="parallax__layer parallax__layer--back">
-            <Particles params={particleParams(nightMode, 30, 2)} />
+            <Particles params={particleParams(nightMode, 25, 2)} />
           </div>
           <div className="parallax__layer parallax__layer--middle">
-            <Particles params={particleParams(nightMode, 20, 2)} />
+            <Particles params={particleParams(nightMode, 25, 2)} />
           </div>
           <div className="parallax__layer parallax__layer--front">
-            <Particles params={particleParams(nightMode, 10, 2)} />
+            <Particles params={particleParams(nightMode, 25, 2)} />
 
             <Landing nightMode={nightMode} setNightMode={setNightMode} />
             <Bio></Bio>
             <NavParent nightMode={nightMode} setNightMode={setNightMode} />
+            <Gallery></Gallery>
           </div>
         </div>
       </div>

@@ -1,0 +1,1 @@
+export const alignImage = require('./project/alignspace.png');
