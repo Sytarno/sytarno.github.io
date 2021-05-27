@@ -23,14 +23,6 @@
   transform: scale(1.1);
 }
 
-/*tsparticles*/
-#tsparticles {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 125%;
-}
-
 /*anime.js*/
 .line {
   opacity: 0;

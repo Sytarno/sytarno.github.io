@@ -16,20 +16,6 @@ const NavButton = ({ text, destination }) => {
         {text}
       </a>
       }
-      
-      {/*
-      <Link
-        activeClass="active"
-        to="bio"
-        spy={true}
-        smooth={true}
-        className="nav-btn-text"
-        offset={-70}
-        duration={500}
-      >
-        {text}
-      </Link>
-      */}
     </div>
   );
 };
@@ -37,7 +23,8 @@ const NavButton = ({ text, destination }) => {
 const NavParent = ({ nightMode, setNightMode }) => {
   return (
     <div className="nav-parent noselect">
-      <NavButton text="Info" destination="bio" />
+      <NavButton text="About" destination="bio" />
+      <NavButton text="Projects" destination="gallery" />
       <NightModeButton nightMode={nightMode} setNightMode={setNightMode} />
     </div>
   );

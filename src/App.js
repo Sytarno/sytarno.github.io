@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Particles from "react-particles-js";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import Wrapper from "./components/Wrapper/Wrapper";
 import Landing from "./components/Landing/Landing";
+import "./components/Landing/Landing.css";
 import NavParent from "./components/Navigation/NavParent";
 import Bio from "./components/Bio/Bio";
 import Gallery from "./components/Gallery/Gallery";
 
-import "./components/Landing/Landing.css";
+import { updateColors, nightMode } from "./components/assets";
 
 import "./App.css";
-
-var nightMode = false;
-
-const updateColors = () => {
-  let root = document.documentElement;
-  nightMode = !nightMode;
-
-  if (nightMode) {
-    root.style.setProperty("--main-bg-color", "#080705");
-    root.style.setProperty("--main-text-color", "#EFF1F3");
-  } else {
-    root.style.setProperty("--main-bg-color", "#EFF1F3");
-    root.style.setProperty("--main-text-color", "#080705");
-  }
-};
 
 const particleParams = (nightMode, amount, size) => {
   return {
@@ -57,6 +44,22 @@ const particleParams = (nightMode, amount, size) => {
   };
 };
 
+const renderThumb = ({ style, ...props }) => {
+  const thumbStyle = {
+    borderRadius: 6,
+    backgroundColor: "rgba(35, 49, 86, 0.8)",
+  };
+  return <div style={{ ...style, ...thumbStyle }} {...props} />;
+};
+
+const CustomScrollbars = (props) => (
+  <Scrollbars
+    renderThumbHorizontal={renderThumb}
+    renderThumbVertical={renderThumb}
+    {...props}
+  />
+);
+
 export default function App() {
   const [nightMode, setNightMode] = useState(false);
   useEffect(() => updateColors, [nightMode]);
@@ -76,10 +79,10 @@ export default function App() {
 
             <Landing nightMode={nightMode} setNightMode={setNightMode} />
             <Bio></Bio>
-            <NavParent nightMode={nightMode} setNightMode={setNightMode} />
             <Gallery></Gallery>
           </div>
         </div>
+        <NavParent nightMode={nightMode} setNightMode={setNightMode} />
       </div>
     </>
   );

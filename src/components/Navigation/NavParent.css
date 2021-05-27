@@ -1,36 +1,65 @@
-.nav-parent{
-    position: fixed;
-    top: 1em;
-    right: 1em;
+.nav-parent {
+  position: fixed;
+  top: 1em;
+  right: 2em;
 }
+/*
+@media (prefers-reduced-motion: no-preference) {
+  .nav-parent {
+    height: 20px;
+    transform: translateY(calc(20px * -1));
+  }
+}
+*/
+.nav-btn {
+  display: inline-block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 
-.nav-btn{
-    display: inline-block;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    
-    /*
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  /*
     background-color: grey;
     border: 5em, solid, black;
 
     */
 
-    transition: transform 0.1s ease-out;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.nav-btn-text{
-    color: var(--main-text-color);
+.nav-btn-text {
+  font-size: 18px;
+  color: var(--main-text-color);
 }
 
-.nav-btn:hover{
-    transform: scale(1.1);
+.nav-btn:hover {
+  transform: scale(1.1);
 }
 
-.nav-btn-text:hover{
-    color: var(--main-text-color);
-    text-decoration: none;
+.nav-btn-text:hover {
+  color: var(--main-text-color);
+  text-decoration: none;
 }
 
-.night-btn:hover{
-    cursor: pointer;
+.night-btn:hover {
+  cursor: pointer;
+}
+
+/*button icon stuff*/
+.icon-light {
+  transform: translateY(-2px) !important;
+}
+
+.icon-light:hover {
+  transform: scale(1.1) !important;
+}
+
+.icon-dark {
+  transform: translateY(-3px) !important;
+}
+
+.icon-dark:hover {
+  transform: scale(1.1) !important;
 }

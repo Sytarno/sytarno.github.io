@@ -4,7 +4,7 @@ import anime from 'animejs'
 
 import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
 
-const Slide = ({ nightMode, setNightMode }) => {
+const Slide = () => {
   const animationRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -22,12 +22,11 @@ const Slide = ({ nightMode, setNightMode }) => {
   return null;
 };
 
-const Landing = ({ nightMode, setNightMode }) => {
-  const [anim, toggle] = useState(1);
+const Landing = ({ nightMode, setNightMode}) => {
   return (
     <section id="landing-section">
       <div
-        onClick={() => setNightMode(!nightMode)}
+        onClick={() => {setNightMode(!nightMode);}}
         id="main-title"
         className="text-center noselect"
       >
