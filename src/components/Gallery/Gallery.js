@@ -22,7 +22,7 @@ const Box = (props) => {
 
 const Gallery = () => {
   return (
-    <section id="Gallery">
+    <section id="gallery">
       <div class="container">
         <div class="row">
           <Box text="ok" obj={projects}></Box>

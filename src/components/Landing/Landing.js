@@ -4,6 +4,8 @@ import anime from 'animejs'
 
 import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
 
+//in hindsight, css tranform would have been better. 
+//however, anime.js is most likely better for advanced scenarios.
 const Slide = () => {
   const animationRef = React.useRef(null);
 
