@@ -30,7 +30,9 @@
 }
 
 .nav-btn-text {
-  font-size: 18px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--main-text-color);
 }
 
@@ -48,6 +50,12 @@
 }
 
 /*button icon stuff*/
+.icon{
+  transform: translateY(-2px) !important;
+}
+
+
+
 .icon-light {
   transform: translateY(-2px) !important;
 }

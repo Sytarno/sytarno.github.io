@@ -75,11 +75,20 @@ export default function App() {
             <Particles params={particleParams(nightMode, 25, 2)} />
           </div>
           <div className="parallax__layer parallax__layer--front">
+            
+            {/*CONTENT*/}
+            
+            
             <Particles params={particleParams(nightMode, 25, 2)} />
 
             <Landing nightMode={nightMode} setNightMode={setNightMode} />
             <Bio></Bio>
-            <Gallery></Gallery>
+            {/*<Gallery></Gallery>*/}
+
+
+
+
+
           </div>
         </div>
         <NavParent nightMode={nightMode} setNightMode={setNightMode} />

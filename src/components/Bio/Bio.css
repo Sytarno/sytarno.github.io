@@ -1,4 +1,5 @@
 #bio {
+  padding-top: 10vh;
   background-color: var(--main-bg-color);
   height: 120vh;
 
@@ -7,19 +8,40 @@
   color: var(--main-text-color);
 }
 
-#bio h1{
-  top: 40vh;
-  position: relative;
+#bio h1 {
+  display: inline-block;
+}
+
+#bio a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+#main-head {
+  padding-top: 30vh;
+
+  width: 100%;
+  left: 0%;
+
   font-size: 60px;
 
-  pointer-events:none;
+  align-items: center;
 
   transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /*pointer-events: none;*/
+}
+
+#main-head-text {
+  display: inline;
 }
 
 .chevron {
-  margin-left: 50px;
-  margin-bottom: 10px;
+  display: inline-block;
+
+  top: -1vh;
+  position: relative;
+  padding-left: 5vh;
 
   pointer-events: all;
 
@@ -27,40 +49,169 @@
 }
 
 .chevron:hover {
-  transform: translateX(20px) scale(1.1);
+  transform: translateX(20px) scale(1.1) !important;
 }
 
-.wipeL{
-  animation: 2s box-wipe-leave forwards;
+.description-area{
+  margin-left: 5vw;
+  height: 90vh;
+  width: 90vw;
+
+  background-color: var(--main-bg-color);
 }
 
-.wipeE{
-  animation: 2s box-wipe-enter forwards;
+.description{
+  padding-top: 10vh;
+}
+
+.description-text{
+  text-indent: 20px;
 }
 
 
-.pfp{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
+.pfp {
+  margin:auto;
+  display:block;
+
+  width: 20vh;
 
   clip-path: circle(50%);
   transition: clip-path 1s;
 }
 
-.pfp:hover{
+.pfp:hover {
   clip-path: circle(69%);
 }
 
+/*line*/
+
+.pad{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.line-bio {
+  background-color: var(--main-text-color);
+}
+
+.v1 {
+  height: 2px;
+  width: 100%;
+  top: 0;
+}
+
+.v2 {
+  width: 2px;
+  height: 100%;
+  margin-left: 50%;
+}
+
+/*wide-text*/
+.wide-text{
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  
+  text-transform: uppercase;
+}
+
+/*rounded-box*/
+.box-rounded{
+  text-transform: uppercase;
+  font-size: 12px;
+
+  text-align: center;
+  vertical-align: middle;
+  line-height: 0vh;
+
+  border-radius: 8px;
+  border: 2px solid var(--main-text-color);
+  padding: 15px;
+  width: auto;
+  height: 1vh;
+
+  margin: 5px;
+}
+
+
+
+
+
+
+
+
+/*anim*/
+.animL {
+  animation: 1s box-wipe-leave forwards;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.animE {
+  animation: 2s box-wipe-enter forwards;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.wipeE{
+  animation: 2s wipe-left forwards;
+  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/*anim keyframes*/
+
 @keyframes box-wipe-leave {
-  0% { clip-path: inset(0); }
-  50% { clip-path: inset(0% 50% 0% 50%); opacity: 1 }
-  100% { clip-path: inset(100% 100% 100% 100%); opacity: 0 }
+  0% {
+    clip-path: inset(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 1;
+  }
 }
 
 @keyframes box-wipe-enter {
-  0% { clip-path: inset(100% 100% 100% 100%); opacity: 0 }
-  50% { clip-path: inset(0% 50% 0% 50%); opacity: 1 }
-  100% { clip-path: inset(0); }
+  0% {
+    clip-path: inset(100% 100% 100% 100%);
+    opacity: 0;
+  }
+  50% {
+    clip-path: inset(50% 0% 50% 0%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes circle-leave {
+  0% {
+    clip-path: circle(100%);
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
+
+@keyframes wipe-left {
+  0% {
+    clip-path: inset(100% 100% 100% 100%);
+    opacity: 0;
+  }
+  50% {
+    clip-path: inset(50% 50% 50% 50%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0);
+  }
 }

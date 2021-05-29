@@ -9,13 +9,25 @@
 
 #main-title {
   color: var(--main-text-color);
-  width: 25%;
+  width: 50vw;
   position: sticky;
-  left: 37.5%;
+  left: 25vw;
   top: 40%;
 }
 
+@media (min-width: 800px){
+  #main-title {
+    color: var(--main-text-color);
+    width: 25%;
+    position: sticky;
+    left: 37.5%;
+    top: 40%;
+  }
+}
+
 #main-title-text {
+  font-size: 4vh;
+  vertical-align: middle;
   transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -33,6 +45,7 @@
   background-color: var(--main-text-color);
   transform-origin: 0 0;
 }
+
 .l1 {
   bottom: 0;
 }
