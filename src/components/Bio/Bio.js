@@ -14,23 +14,29 @@ const WidthContent = ({ clicks, param }) => {
   width: 40%;
   left: 30%;
   */
-  const springStyle = useSpring({
-    width: clicks > param ? "50%" : "40%",
-    left: clicks > param ? "25%" : "30%",
-  });
+  const springStyle = useSpring({});
   return (
-    <animated.div
-      id="main-head-text"
-      className={clicks > param ? "animL" : ""}
-      style={springStyle}
-    >
-      <a href="#bio" to="bio" smooth={true}>
-        {clicks > param - 1 ? "Hi! I'm Evan." : "Hi! I'm Evan."}
-      </a>
-      <div className={"chevron"}>
-        <BsChevronRight size="50"></BsChevronRight>
-      </div>
-    </animated.div>
+    <>
+      <animated.div
+        id="main-head-text"
+        className={clicks > param ? "animL" : ""}
+        style={springStyle}
+      >
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-10">
+              <a href="#bio" to="bio" smooth={true}>
+                {clicks > param - 1 ? "Hi! I'm Evan." : "Hi! I'm Evan."}
+              </a>
+            </div>
+
+            <div className={"col-xl-2 chevron"}>
+              <BsChevronRight className="svg" size="70"></BsChevronRight>
+            </div>
+          </div>
+        </div>
+      </animated.div>
+    </>
   );
 };
 
@@ -77,24 +83,27 @@ const About = ({ unhide }) => {
   return (
     <div className={"description-area" + (unhide ? " blurE" : "")}>
       <div className="description">
-        <div className={"container"}>
-          <div className={"row" + (unhide ? " animE" : "")}>
-            <div className="col-sm-8">
+        <div className={"container-fluid"}>
+          <div className={"row expand" + (unhide ? " animE" : "")}>
+            <div className="col-xl-8">
               <div className="description-text">
                 {"\t"}I love designing experiences. Whether it be through
-                animation, UI/UX, or software, I code to express a vision. My
-                meticulous nature forced me out of my comfort zone. Passion convinced me to diversify my skills.
+                animation, UI/UX, or software, I adore simplicity and sleekness.
                 {/*</div>
+
+                My
+                meticulous nature forced me out of my comfort zone. Passion convinced me to diversify my skills.
+
               <div className="description-text">*/}
                 {"\t"}I'm always in a constant flux—tinkering with game scripts
                 as a child, breathing life into a multi-purpose Discord bot, and
                 now becoming a front-end developer.
               </div>
             </div>
-            <div className="col-sm-1">
+            <div className="col-xl-1">
               <div className="line-bio v2"></div>
             </div>
-            <div className="col-sm-3 justify-content-center">
+            <div className="col-xl-3 justify-content-center">
               <img className="pfp pad" src={evanImg.default}></img>
             </div>
           </div>
@@ -108,6 +117,9 @@ const About = ({ unhide }) => {
             {skills.map((name) => (
               <RoundedSkill text={name} />
             ))}
+          </div>
+          <div className={"row expand" + (unhide ? " animE" : "")}>
+            Projects
           </div>
         </div>
       </div>
