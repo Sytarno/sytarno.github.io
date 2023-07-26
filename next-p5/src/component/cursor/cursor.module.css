@@ -1,0 +1,16 @@
+.cursordot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    mix-blend-mode: difference;
+}
+
+.cursorparent {
+    position: absolute;
+    z-index: 10000;
+    left: -7.5px;
+    top: -7.5px;
+    pointer-events: none;
+}
